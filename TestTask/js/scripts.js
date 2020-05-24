@@ -1,8 +1,6 @@
 "use strict"
 
 //---------------------------------------------------------------------
-//+
-
 function firstOptionReaction(op) {
     if (op.checked) {
         $('.options__categories').hide();
@@ -23,7 +21,6 @@ function thirdOptionReaction(op) {
 }
 
 //---------------------------------------------------------------------
-//-
 function unselectAll() {
     let categories_block = document.querySelector(".options__categories");
     for (let child of categories_block.children) {
@@ -46,8 +43,6 @@ function select(category) {
 }
 
 //---------------------------------------------------------------------
-//-
-
 window.onload = function(){
     loadJokes();
     const joke_button = document.querySelector(".form__submit");
@@ -115,7 +110,6 @@ function addJoke(joke_text, joke_id, joke_url, joke_last_update, joke_categories
 
 
 //---------------------------------------------------------------------
-//-
 function addToFavs(heart) {
     let joke = heart.parentNode;
     joke.classList.add("fav");
@@ -153,7 +147,6 @@ function removeFromFavsBlock(heart, joke_id) {
 }
 
 //---------------------------------------------------------------------
-//+
 const burger = document.querySelector(".burger");
 burger.addEventListener('click', () => {
     document.querySelector(".favourite").classList.toggle("active");

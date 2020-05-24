@@ -9,7 +9,11 @@ function unsave(joke, key) {
     if (jokesArray == null || jokesArray == "") {
         return;
     } else {
-        jokesArray = jokesArray.replace(joke, "");
+        if (document.querySelector(".main__jokes").children.length > 1 || document.querySelector(".favourite__jokes").children.length > 1) {
+            jokesArray = jokesArray.replace("," + joke, "");
+        } else {
+            jokesArray = jokesArray.replace(joke, "");
+        }
         localStorage.setItem(key, jokesArray);
     }
 }
