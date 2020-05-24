@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Let's try to find a joke for you!</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="main__wrapper">
+            <div class="main__msi">MSI 2020</div>
+            <div class="main__form form">
+                <div class="form__title">Hey!</div>
+                <div class="form__subtitle">Let’s try to find a joke for you:</div>
+                <div class="form__options options">
+                    <label>
+                        <input class="options__inp1" type="radio" name="option" value="random" onclick="firstOptionReaction(this);" checked>
+                        <div class="options__text">
+                            <p>Random</p>
+                        </div>
+                    </label><br>
+                    <label>
+                        <input class="options__inp2" type="radio" name="option" value="from-categories" onclick="secOptionReaction(this);">
+                        <div class="options__text">
+                            <p>From categories</p>
+                        </div>
+                    </label><br>
+                    <div class="options__categories">
+                        <div class="options__category_selected category_selected" onclick="select(this);"><div class="category_selected__text">animal</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">career</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">celebrity</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">dev</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">explicit</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">fashion</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">food</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">history</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">money</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">movie</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">music</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">political</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">religion</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">science</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">sport</div></div>
+                        <div class="options__category category" onclick="select(this);"><div class="category__text">travel</div></div>
+                    </div>
+                    <label>
+                        <input class="options__inp3" type="radio" name="option" value="search" onclick="thirdOptionReaction(this);">
+                        <div class="options__text">
+                            <p>Search</p>
+                        </div>
+                    </label><br>
+                    <div class="options__search-block">
+                        <input class="options__search" type="search" name="search" placeholder="Free text search...">
+                    </div>
+                </div>
+                <button class="form__submit" type="button">Get a joke</button>
+            </div>
+          
+            <div class="main__jokes"></div>
+        </div>
+    </div>
+
+    <div class="darkened"></div>
+
+    <div class="burger">
+        <div class="burger__icon"></div>
+        <div class="burger__text">Favourite</div>
+    </div>
+
+    <div class="favourite">
+        <div class="favourite__title">Favourite</div>
+        <div class="favourite__jokes"></div>
+    </div>
+
+    <script src="js/store.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+
+</html>
